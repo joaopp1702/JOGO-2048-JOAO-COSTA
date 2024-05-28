@@ -1,0 +1,1566 @@
+chat, vou te passar toda as minhas classes e todo o javadoc, pode adicionar as mecanicas q faltam pra fazer meu 2048
+package jogo;
+
+import console.Console;
+import cores.Cor;
+import cores.StringColorida;
+import mecanicas.Tabuleiro;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+import java.util.Random;
+
+
+public class Menu {
+
+
+
+    public static void main(String[] args) {
+        StringColorida fundin = new StringColorida(" 0  ", Cor.BRANCO_BRANCO, Cor.FUNDO_PRETO);
+        StringColorida barrae = new StringColorida("|---", Cor.CINZA, Cor.FUNDO_PRETO);
+        StringColorida barrad = new StringColorida("---|", Cor.CINZA, Cor.FUNDO_PRETO);
+        StringColorida teto = new StringColorida("----", Cor.CINZA, Cor.FUNDO_PRETO);
+        StringColorida c1 = new StringColorida("2   ", Cor.AZUL, Cor.FUNDO_PRETO);
+        StringColorida c2 = new StringColorida("4   ", Cor.AZUL, Cor.FUNDO_PRETO);
+        StringColorida c3 = new StringColorida("8   ", Cor.AZUL, Cor.FUNDO_PRETO);
+        StringColorida c4 = new StringColorida("16  ", Cor.AZUL, Cor.FUNDO_PRETO);
+        StringColorida c5 = new StringColorida("32  ", Cor.AZUL, Cor.FUNDO_PRETO);
+        StringColorida c6 = new StringColorida("64  ", Cor.AZUL, Cor.FUNDO_PRETO);
+        StringColorida c7 = new StringColorida("128 ", Cor.AZUL, Cor.FUNDO_PRETO);
+        StringColorida c8 = new StringColorida("256 ", Cor.AZUL, Cor.FUNDO_PRETO);
+        StringColorida c9 = new StringColorida("512 ", Cor.AZUL, Cor.FUNDO_PRETO);
+        StringColorida c10 = new StringColorida("1024", Cor.AZUL, Cor.FUNDO_PRETO);
+        StringColorida c11 = new StringColorida("2048", Cor.AZUL, Cor.FUNDO_PRETO);
+
+        carta tet = new carta(teto);
+        carta barraae = new carta(barrae);
+        carta barraad = new carta(barrad);
+        carta a2 = new carta(c1);
+        carta a4 = new carta(c2);
+        carta a8 = new carta(c3);
+        carta a16 = new carta(c4);
+        carta a32 = new carta(c5);
+        carta a64 = new carta(c6);
+        carta a128 = new carta(c7);
+        carta a256 = new carta(c8);
+        carta a512 = new carta(c9);
+        carta a1024 = new carta(c10);
+        carta a2048 = new carta(c11);
+
+
+        List<carta> cartas = new ArrayList<>();
+//        cartas.add(a2);
+        pilha pilhaDeCartas = new pilha(cartas);
+        pilhaDeCartas.embaralha();
+
+
+
+        carta teste = new carta(fundin);
+//        Tabuleiro tab = new Tabaleiro(6, 6, teste);
+//        tab.colocaCarta(0 , 0, barraae );
+//        tab.colocaCarta(1 , 0, barraae );
+//        tab.colocaCarta(2 , 0, barraae );
+//        tab.colocaCarta(3 , 0, barraae );
+//        tab.colocaCarta(4 , 0, barraae );
+//        tab.colocaCarta(5 , 0, barraae);
+//        tab.colocaCarta(0 , 1, tet );
+//        tab.colocaCarta(0 , 2, tet );
+//        tab.colocaCarta(0 , 3, tet );
+//        tab.colocaCarta(0 , 4, tet );
+//        tab.colocaCarta(0 , 5, tet );
+//        tab.colocaCarta(5 , 0, barraae );
+//        tab.colocaCarta(5 , 1, tet );
+//        tab.colocaCarta(5 , 2, tet );
+//        tab.colocaCarta(5 , 3, tet );
+//        tab.colocaCarta(5 , 4, tet );
+//        tab.colocaCarta(5 , 5, tet );
+//        tab.colocaCarta(0 , 5, barraad );
+//        tab.colocaCarta(1 , 5 , barraad );
+//        tab.colocaCarta(2 , 5, barraad );
+//        tab.colocaCarta(3 , 5, barraad );
+//        tab.colocaCarta(4 , 5, barraad );
+//        tab.colocaCarta(5 , 5, barraad );
+//        tab.colocaCarta(0 , 5, barraad );
+//
+//
+//
+//
+//
+//        Console.println(tab);
+
+
+
+
+        Scanner scanner = new Scanner(System.in);
+        int escolha;
+
+
+        do{
+            Tela();
+            escolha = scanner.nextInt();
+
+            switch (escolha){
+
+                case 1:
+                    Console.println("Novo Jogo");
+
+
+                    Tabaleiro tab = new Tabaleiro(6, 6, teste);
+                    tab.colocaCarta(0 , 0, barraae );
+                    tab.colocaCarta(1 , 0, barraae );
+                    tab.colocaCarta(2 , 0, barraae );
+                    tab.colocaCarta(3 , 0, barraae );
+                    tab.colocaCarta(4 , 0, barraae );
+                    tab.colocaCarta(5 , 0, barraae);
+                    tab.colocaCarta(0 , 1, tet );
+                    tab.colocaCarta(0 , 2, tet );
+                    tab.colocaCarta(0 , 3, tet );
+                    tab.colocaCarta(0 , 4, tet );
+                    tab.colocaCarta(0 , 5, tet );
+                    tab.colocaCarta(5 , 0, barraae );
+                    tab.colocaCarta(5 , 1, tet );
+                    tab.colocaCarta(5 , 2, tet );
+                    tab.colocaCarta(5 , 3, tet );
+                    tab.colocaCarta(5 , 4, tet );
+                    tab.colocaCarta(5 , 5, tet );
+                    tab.colocaCarta(0 , 5, barraad );
+                    tab.colocaCarta(1 , 5 , barraad );
+                    tab.colocaCarta(2 , 5, barraad );
+                    tab.colocaCarta(3 , 5, barraad );
+                    tab.colocaCarta(4 , 5, barraad );
+                    tab.colocaCarta(5 , 5, barraad );
+                    tab.colocaCarta(0 , 5, barraad );
+
+                    tab.colocarCartaAleatoria(pilhaDeCartas, teste);
+
+                    Console.println(tab);
+
+                    break;
+                case 2:
+                    Console.println("Jogo Salvo");
+                    break;
+                case 3:
+                    Console.println("Sair");
+                    return;
+                case 4:
+                    Console.println("menu");
+                    paus1();
+                default:
+                    Console.println("ESCOLHA");
+                    break;
+
+
+            }
+        }while(true);
+
+
+
+    }
+
+    public Menu() {
+    }
+
+    private static void Tela() {
+
+
+        Console.println("☛2048 por Joao Costa☚");
+        Console.println("1-Novo Jogo");
+        Console.println("2-Jogo Salvo");
+        Console.println("3-Sair");
+        Console.print("ESCOLHA ENTRE 1, 2, 3 NAO ERRE DNV SE NAO O SEU PC VAI EXPLODIR: ");
+
+
+    }
+
+
+    public static void paus1() {
+
+
+        Scanner scanner = new Scanner(System.in);
+        int escolha1;
+
+
+        do{
+            paus();
+            escolha1 = scanner.nextInt();
+
+            switch (escolha1){
+
+                case 1:
+                    Console.println("Voltar ao jogo");
+                    paus();
+                    //ADD JOVO JOGO
+                    break;
+                case 2:
+                    Console.println("Salvo");
+                    paus();
+                    //ADD JOGO SALVO
+                    break;
+                case 3:
+                    Console.println("voltar ao menu");
+                    Tela();
+                case 4:
+                    Console.println("Sair");
+                    exitProgram();
+                default:
+                    Console.println("ESCOLHA");
+                    break;
+
+
+            }
+        }while(true);
+
+
+
+    }
+    public static void paus(){
+        Console.println("MENU DE PAUSE" );
+        Console.println("1-VOLTAR AO JOGO");
+        Console.println("2-SALVAR O JOGO");
+        Console.println("3-VOLTAR AO MENU");
+        Console.println("4-Sair");
+        Console.print("Escolha: ");
+
+    }
+
+    public static void exitProgram() {
+        System.exit(0);
+    }
+
+
+
+
+
+
+
+}
+
+package jogo;
+
+
+import mecanicas.Carta;
+import mecanicas.Tabuleiro;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Random;
+
+public class Tabaleiro extends Tabuleiro {
+
+    public Tabaleiro(int numLinhas, int numColunas, Carta fundo) {
+        super(numLinhas, numColunas, fundo);
+    }
+
+    public void colocarCartaAleatoria(pilha pilhaDeCartas, Carta cartaVazia) {
+        List<int[]> posicoesVazias = new ArrayList<>();
+        for (int i = 0; i < getNumLinhas(); i++) {
+            for (int j = 0; j < getNumColunas(); j++) {
+                if (pegaCarta(i, j).equals(cartaVazia)) {
+                    posicoesVazias.add(new int[]{i, j});
+                }
+            }
+        }
+
+        if (!posicoesVazias.isEmpty() && pilhaDeCartas.getTamanho() > 0) {
+            Random random = new Random();
+            int[] posicaoAleatoria = posicoesVazias.get(random.nextInt(posicoesVazias.size()));
+            Carta cartaParaColocar = pilhaDeCartas.compra();
+            colocaCarta(posicaoAleatoria[0], posicaoAleatoria[1], cartaParaColocar);
+        }
+    }
+
+    private int getNumLinhas() {
+        int numLinhas = 6;
+        return numLinhas;
+    }
+
+    private int getNumColunas() {
+        int numColunas = 6;
+        return numColunas;
+    }
+
+}
+
+
+
+package jogo;
+
+
+import cores.StringColorida;
+import mecanicas.Carta;
+
+public class carta extends Carta {
+
+    public carta(StringColorida frente) {
+        super(frente);
+    }
+}
+
+package jogo;
+
+import console.Console;
+
+import java.util.Scanner;
+
+public class Paus extends Menu {
+
+    public static void paus1() {
+
+
+        Scanner scanner = new Scanner(System.in);
+        int escolha;
+
+
+        do{
+            paus1();
+            escolha = scanner.nextInt();
+
+            switch (escolha){
+
+                case 1:
+                    Console.println("Voltar ao jogo");
+
+                    //ADD JOVO JOGO
+                    break;
+
+                case 2:
+                    Console.println("Salvo");
+
+                    //ADD JOGO SALVO
+                    break;
+
+                case 3:
+                    Console.println("voltar ao menu");
+                    break;
+
+                case 4:
+                    Console.println("Sair");
+                    return;
+
+
+                default:
+                    Console.println("ESCOLHA");
+                    break;
+
+
+            }
+        }while(true);
+
+
+
+    }
+
+    public static void pause(){
+        Console.println("MENU DE PAUSE" );
+        Console.println("1-VOLTAR AO JOGO");
+        Console.println("2-SALVAR O JOGO");
+        Console.println("3-VOLTAR AO MENU");
+        Console.println("4-Sair");
+        Console.print("Escolha: ");
+
+    }
+}
+
+
+agora o java doc
+mecanicas
+Class Carta
+java.lang.Object
+mecanicas.Carta
+
+public abstract class Carta
+extends java.lang.Object
+Classe abstrata que representa Cartas. Todos os elementos de jogos nesta engine devem ser cartas colocadas sobre um Tabuleiro. Assim, todo jogo deve possuir uma ou mais classes que herdam desta, acrescentando o que for necessário.
+See Also:
+StringColorida, Tabuleiro
+Constructor Summary
+Constructors
+Constructor and Description
+Carta(StringColorida frente)
+Cria uma Carta com a frente dada pela StringColorida passada, cujo verso possui a mesma quantidade de linhas e cor base Cor.BRANCO_BRANCO.
+Carta(StringColorida frente, StringColorida verso)
+Cria uma Carta com a frente dada pela StringColorida 'frente', e o verso dado pela StringColorida 'verso'.
+Carta(StringColorida frente, StringColorida verso, boolean viradaParaCima)
+Cria uma Carta com a frente dada pela StringColorida 'frente', o verso dado pela StringColorida 'verso' e frente ou verso virada para cima, de acordo com o valor passado.
+Method Summary
+All MethodsInstance MethodsConcrete Methods
+Modifier and Type	Method and Description
+Carta	copia()
+Cria uma cópia desta Carta e a retorna.
+boolean	equals(java.lang.Object obj)
+boolean	estaViradaParaCima()
+Retorna verdadeiro se a frente desta carta está virada para cima e falso, caso contrário.
+StringColorida	getFaceParaCima()
+Retorna uma cópia da StringColorida da face que está para cima desta Carta.
+StringColorida	getFrente()
+Retorna uma cópia da StringColorida da frente desta Carta.
+StringColorida	getVerso()
+Retorna uma cópia da StringColorida do verso desta Carta.
+int	hashCode()
+java.lang.String	toString()
+void	vira()
+Inverte a face desta Carta que está virada para cima.
+Methods inherited from class java.lang.Object
+clone, finalize, getClass, notify, notifyAll, wait, wait, wait
+Constructor Detail
+Carta
+public Carta(StringColorida frente)
+Cria uma Carta com a frente dada pela StringColorida passada, cujo verso possui a mesma quantidade de linhas e cor base Cor.BRANCO_BRANCO. A carta está virada com a frente para cima.
+Parameters:
+frente - StringColorida que representa a frente da Carta.
+See Also:
+StringColorida
+Carta
+public Carta(StringColorida frente,
+             StringColorida verso)
+Cria uma Carta com a frente dada pela StringColorida 'frente', e o verso dado pela StringColorida 'verso'. A carta está virada com a frente para cima.
+Parameters:
+frente - StringColorida que representa a frente da Carta.
+verso - StringColorida que representa o verso da Carta.
+Throws:
+java.lang.RuntimeException - gera um erro caso a frente e o verso não possuam as mesmas dimensões.
+See Also:
+StringColorida
+Carta
+public Carta(StringColorida frente,
+             StringColorida verso,
+             boolean viradaParaCima)
+Cria uma Carta com a frente dada pela StringColorida 'frente', o verso dado pela StringColorida 'verso' e frente ou verso virada para cima, de acordo com o valor passado.
+Parameters:
+frente - StringColorida que representa a frente da Carta.
+verso - StringColorida que representa o verso da Carta.
+viradaParaCima - frente fica para cima, caso true, e verso fica para cima, caso false.
+Throws:
+java.lang.RuntimeException - gera um erro caso a frente e o verso não possuam as mesmas dimensões.
+See Also:
+StringColorida
+Method Detail
+getFrente
+public StringColorida getFrente()
+Retorna uma cópia da StringColorida da frente desta Carta.
+Returns:
+uma cópia da StringColorida da frente desta Carta.
+See Also:
+StringColorida
+getVerso
+public StringColorida getVerso()
+Retorna uma cópia da StringColorida do verso desta Carta.
+Returns:
+uma cópia da StringColorida do verso desta Carta.
+See Also:
+StringColorida
+getFaceParaCima
+public StringColorida getFaceParaCima()
+Retorna uma cópia da StringColorida da face que está para cima desta Carta.
+Returns:
+uma cópia da StringColorida da face que está para cima desta Carta.
+See Also:
+StringColorida
+estaViradaParaCima
+public boolean estaViradaParaCima()
+Retorna verdadeiro se a frente desta carta está virada para cima e falso, caso contrário.
+Returns:
+verdadeiro se a frente desta carta está virada para cima e falso, caso contrário.
+vira
+public void vira()
+Inverte a face desta Carta que está virada para cima.
+copia
+public Carta copia()
+Cria uma cópia desta Carta e a retorna.
+Returns:
+uma cópia desta Carta.
+toString
+public java.lang.String toString()
+Overrides:
+toString in class java.lang.Object
+hashCode
+public int hashCode()
+Overrides:
+hashCode in class java.lang.Object
+equals
+public boolean equals(java.lang.Object obj)
+Overrides:
+equals in class java.lang.Object
+
+console
+Class Console
+java.lang.Object
+console.Console
+
+public class Console
+extends java.lang.Object
+Esta classe estática contém métodos para interação com o usuário através do console de forma amigável ao uso de UTF-8 e possibilitando a captura de teclas do usuário.
+Constructor Summary
+Constructors
+Constructor and Description
+Console()
+Method Summary
+All MethodsStatic MethodsConcrete Methods
+Modifier and Type	Method and Description
+static Tecla	getTecla()
+Lê e retorna o p Runtime.getRuntime().exec("clear");róximo caractere que foi pressionado.
+static java.lang.String	input()
+Lê do console a última frase escrita pelo usuário após pressionar ENTER.
+static java.lang.String	input(java.lang.String msg)
+Lê do console a última frase escrita pelo usuário após pressionar ENTER.
+static void	limpaTela()
+Limpa a tela do console, eliminando quaisquer caracteres que estavam visíveis até então.
+static void	print(java.lang.Object obj)
+Imprime no console qualquer objeto.
+static void	println(java.lang.Object obj)
+Imprime no console qualquer objeto, pulando uma linha ao final.
+static void	saiDoPrograma()
+Força a saída do programa.
+Methods inherited from class java.lang.Object
+clone, equals, finalize, getClass, hashCode, notify, notifyAll, toString, wait, wait, wait
+Constructor Detail
+Console
+public Console()
+Method Detail
+saiDoPrograma
+public static void saiDoPrograma()
+Força a saída do programa. Caso o método getTecla() tenha sido usado ao longo de sua execução, o programa não será fechado automaticamente ao chegar no final da main, pois há uma segunda thread em execução para capturar teclas. Portanto, este método garante a saída correta do programa.
+See Also:
+getTecla()
+print
+public static void print(java.lang.Object obj)
+Imprime no console qualquer objeto. Este método utiliza a codificação UTF-8 para tal. Necessita que o console alvo possua uma fonte que entenda UTF-8.
+Parameters:
+obj - objeto a ser printado na tela. É feita uma chamada ao método toString() de obj.
+println
+public static void println(java.lang.Object obj)
+Imprime no console qualquer objeto, pulando uma linha ao final. Este método utiliza a codificação UTF-8 para tal. Necessita que o console alvo possua uma fonte que entenda UTF-8.
+Parameters:
+obj - objeto a ser printado na tela. É feita uma chamada ao método toString() de obj.
+input
+public static java.lang.String input(java.lang.String msg)
+Lê do console a última frase escrita pelo usuário após pressionar ENTER. Em alguns casos, podem aparecer os caracteres pressionados anteriormente pelo usuário, caso tenha sido usado o método getTecla() em algum momento. Para garantir que não pareçam, obrigue o usuário a pressionar ENTER antes da utilização deste método.
+Parameters:
+msg - Mensagem a ser printada na tela antesda aguardar pela entrada.
+Returns:
+String composta por tudo o que foi digitado até a tecla ENTER ser pressionada.
+See Also:
+getTecla()
+input
+public static java.lang.String input()
+Lê do console a última frase escrita pelo usuário após pressionar ENTER. Em alguns casos, podem aparecer os caracteres pressionados anteriormente pelo usuário, caso tenha sido usado o método getTecla() em algum momento. Para garantir que não pareçam, obrigue o usuário a pressionar ENTER antes da utilização deste método.
+Returns:
+String composta por tudo o que foi digitado até a tecla ENTER ser pressionada.
+See Also:
+getTecla()
+limpaTela
+public static void limpaTela()
+Limpa a tela do console, eliminando quaisquer caracteres que estavam visíveis até então.
+getTecla
+public static Tecla getTecla()
+Lê e retorna o p Runtime.getRuntime().exec("clear");róximo caractere que foi pressionado. A utilização deste método a qualquer momento no programa implica na obrigatoriedade de fechá-lo manualmente ao final de sua execução. O desenvolvedor pode garantir este fechamento ao acrescentar uma chamada ao método saiDoPrograma() na última linha de sua main.
+Returns:
+a última tecla a ser pressionada. Todas as teclas disponíveis se encontram no Enum Tecla.
+See Also:
+saiDoPrograma(), Tecla
+cores
+Enum Cor
+java.lang.Object
+java.lang.Enum<Cor>
+cores.Cor
+All Implemented Interfaces:
+java.io.Serializable, java.lang.Comparable<Cor>
+
+public enum Cor
+extends java.lang.Enum<Cor>
+Classe Enum que representa as possíveis cores ANSI, representáveis em consoles conpatíveis, como o CMD e PowerShell do Windows e os terminais Linux. É o responsável por setar a utilização dos códigos ANSI em consoles Windows estaticamente, utilizando as funções da JNA.
+See Also:
+com.sun.jna
+Enum Constant Summary
+Enum Constants
+Enum Constant and Description
+AMARELO
+Representa a cor da fonte de acordo com seu nome.
+AZUL
+Representa a cor da fonte de acordo com seu nome.
+AZUL_CLARO
+Representa a cor da fonte de acordo com seu nome.
+BEGE
+Representa a cor da fonte de acordo com seu nome.
+BRANCO
+Representa a cor da fonte de acordo com seu nome.
+BRANCO_BRANCO
+Representa a cor da fonte de acordo com seu nome.
+CIANO
+Representa a cor da fonte de acordo com seu nome.
+CIANO_CLARO
+Representa a cor da fonte de acordo com seu nome.
+CINZA
+Representa a cor da fonte de acordo com seu nome.
+FUNDO_AMARELO
+Representa a cor do fundo de acordo com seu nome.
+FUNDO_AZUL
+Representa a cor do fundo de acordo com seu nome.
+FUNDO_AZUL_CLARO
+Representa a cor do fundo de acordo com seu nome.
+FUNDO_BEGE
+Representa a cor do fundo de acordo com seu nome.
+FUNDO_BRANCO
+Representa a cor do fundo de acordo com seu nome.
+FUNDO_BRANCO_BRANCO
+Representa a cor do fundo de acordo com seu nome.
+FUNDO_CIANO
+Representa a cor do fundo de acordo com seu nome.
+FUNDO_CIANO_CLARO
+Representa a cor do fundo de acordo com seu nome.
+FUNDO_CINZA
+Representa a cor do fundo de acordo com seu nome.
+FUNDO_PRETO
+Representa a cor do fundo de acordo com seu nome.
+FUNDO_ROSA
+Representa a cor do fundo de acordo com seu nome.
+FUNDO_ROSA_CHOQUE
+Representa a cor do fundo de acordo com seu nome.
+FUNDO_ROXO
+Representa a cor do fundo de acordo com seu nome.
+FUNDO_VERDE
+Representa a cor do fundo de acordo com seu nome.
+FUNDO_VERDE_CLARO
+Representa a cor do fundo de acordo com seu nome.
+FUNDO_VERMELHO
+Representa a cor do fundo de acordo com seu nome.
+PRETO
+Representa a cor da fonte de acordo com seu nome.
+RESET
+Representa o reset para as configurações padrões do Console.
+ROSA
+Representa a cor da fonte de acordo com seu nome.
+ROSA_CHOQUE
+Representa a cor da fonte de acordo com seu nome.
+ROXO
+Representa a cor da fonte de acordo com seu nome.
+VERDE
+Representa a cor da fonte de acordo com seu nome.
+VERDE_CLARO
+Representa a cor da fonte de acordo com seu nome.
+VERMELHO
+Representa a cor da fonte de acordo com seu nome.
+Method Summary
+All MethodsStatic MethodsInstance MethodsConcrete Methods
+Modifier and Type	Method and Description
+java.lang.String	getPrefixo()
+Retorna o prefixo ANSI utilizado para colorir a String de acordo com a Cor associada.
+static void	testaTodasAsCores(java.lang.String teste)
+Colore a String teste com todas as cores de fontes e fundos disponíveis.
+static Cor	valueOf(java.lang.String name)
+Returns the enum constant of this type with the specified name.
+static Cor[]	values()
+Returns an array containing the constants of this enum type, in the order they are declared.
+Methods inherited from class java.lang.Enum
+clone, compareTo, equals, finalize, getDeclaringClass, hashCode, name, ordinal, toString, valueOf
+Methods inherited from class java.lang.Object
+getClass, notify, notifyAll, wait, wait, wait
+Enum Constant Detail
+RESET
+public static final Cor RESET
+Representa o reset para as configurações padrões do Console.
+PRETO
+public static final Cor PRETO
+Representa a cor da fonte de acordo com seu nome. Varia em tons dependendo do console utilizado.
+VERMELHO
+public static final Cor VERMELHO
+Representa a cor da fonte de acordo com seu nome. Varia em tons dependendo do console utilizado.
+VERDE
+public static final Cor VERDE
+Representa a cor da fonte de acordo com seu nome. Varia em tons dependendo do console utilizado.
+AMARELO
+public static final Cor AMARELO
+Representa a cor da fonte de acordo com seu nome. Varia em tons dependendo do console utilizado.
+AZUL
+public static final Cor AZUL
+Representa a cor da fonte de acordo com seu nome. Varia em tons dependendo do console utilizado.
+ROXO
+public static final Cor ROXO
+Representa a cor da fonte de acordo com seu nome. Varia em tons dependendo do console utilizado.
+CIANO
+public static final Cor CIANO
+Representa a cor da fonte de acordo com seu nome. Varia em tons dependendo do console utilizado.
+BRANCO
+public static final Cor BRANCO
+Representa a cor da fonte de acordo com seu nome. Varia em tons dependendo do console utilizado.
+CINZA
+public static final Cor CINZA
+Representa a cor da fonte de acordo com seu nome. Varia em tons dependendo do console utilizado.
+ROSA
+public static final Cor ROSA
+Representa a cor da fonte de acordo com seu nome. Varia em tons dependendo do console utilizado.
+VERDE_CLARO
+public static final Cor VERDE_CLARO
+Representa a cor da fonte de acordo com seu nome. Varia em tons dependendo do console utilizado.
+BEGE
+public static final Cor BEGE
+Representa a cor da fonte de acordo com seu nome. Varia em tons dependendo do console utilizado.
+AZUL_CLARO
+public static final Cor AZUL_CLARO
+Representa a cor da fonte de acordo com seu nome. Varia em tons dependendo do console utilizado.
+ROSA_CHOQUE
+public static final Cor ROSA_CHOQUE
+Representa a cor da fonte de acordo com seu nome. Varia em tons dependendo do console utilizado.
+CIANO_CLARO
+public static final Cor CIANO_CLARO
+Representa a cor da fonte de acordo com seu nome. Varia em tons dependendo do console utilizado.
+BRANCO_BRANCO
+public static final Cor BRANCO_BRANCO
+Representa a cor da fonte de acordo com seu nome. Varia em tons dependendo do console utilizado.
+FUNDO_PRETO
+public static final Cor FUNDO_PRETO
+Representa a cor do fundo de acordo com seu nome. Varia em tons dependendo do console utilizado.
+FUNDO_VERMELHO
+public static final Cor FUNDO_VERMELHO
+Representa a cor do fundo de acordo com seu nome. Varia em tons dependendo do console utilizado.
+FUNDO_VERDE
+public static final Cor FUNDO_VERDE
+Representa a cor do fundo de acordo com seu nome. Varia em tons dependendo do console utilizado.
+FUNDO_AMARELO
+public static final Cor FUNDO_AMARELO
+Representa a cor do fundo de acordo com seu nome. Varia em tons dependendo do console utilizado.
+FUNDO_AZUL
+public static final Cor FUNDO_AZUL
+Representa a cor do fundo de acordo com seu nome. Varia em tons dependendo do console utilizado.
+FUNDO_ROXO
+public static final Cor FUNDO_ROXO
+Representa a cor do fundo de acordo com seu nome. Varia em tons dependendo do console utilizado.
+FUNDO_CIANO
+public static final Cor FUNDO_CIANO
+Representa a cor do fundo de acordo com seu nome. Varia em tons dependendo do console utilizado.
+FUNDO_BRANCO
+public static final Cor FUNDO_BRANCO
+Representa a cor do fundo de acordo com seu nome. Varia em tons dependendo do console utilizado.
+FUNDO_CINZA
+public static final Cor FUNDO_CINZA
+Representa a cor do fundo de acordo com seu nome. Varia em tons dependendo do console utilizado.
+FUNDO_ROSA
+public static final Cor FUNDO_ROSA
+Representa a cor do fundo de acordo com seu nome. Varia em tons dependendo do console utilizado.
+FUNDO_VERDE_CLARO
+public static final Cor FUNDO_VERDE_CLARO
+Representa a cor do fundo de acordo com seu nome. Varia em tons dependendo do console utilizado.
+FUNDO_BEGE
+public static final Cor FUNDO_BEGE
+Representa a cor do fundo de acordo com seu nome. Varia em tons dependendo do console utilizado.
+FUNDO_AZUL_CLARO
+public static final Cor FUNDO_AZUL_CLARO
+Representa a cor do fundo de acordo com seu nome. Varia em tons dependendo do console utilizado.
+FUNDO_ROSA_CHOQUE
+public static final Cor FUNDO_ROSA_CHOQUE
+Representa a cor do fundo de acordo com seu nome. Varia em tons dependendo do console utilizado.
+FUNDO_CIANO_CLARO
+public static final Cor FUNDO_CIANO_CLARO
+Representa a cor do fundo de acordo com seu nome. Varia em tons dependendo do console utilizado.
+FUNDO_BRANCO_BRANCO
+public static final Cor FUNDO_BRANCO_BRANCO
+Representa a cor do fundo de acordo com seu nome. Varia em tons dependendo do console utilizado.
+Method Detail
+values
+public static Cor[] values()
+Returns an array containing the constants of this enum type, in the order they are declared. This method may be used to iterate over the constants as follows:
+for (Cor c : Cor.values())
+    System.out.println(c);
+Returns:
+an array containing the constants of this enum type, in the order they are declared
+valueOf
+public static Cor valueOf(java.lang.String name)
+Returns the enum constant of this type with the specified name. The string must match exactly an identifier used to declare an enum constant in this type. (Extraneous whitespace characters are not permitted.)
+Parameters:
+name - the name of the enum constant to be returned.
+Returns:
+the enum constant with the specified name
+Throws:
+java.lang.IllegalArgumentException - if this enum type has no constant with the specified name
+java.lang.NullPointerException - if the argument is null
+getPrefixo
+public java.lang.String getPrefixo()
+Retorna o prefixo ANSI utilizado para colorir a String de acordo com a Cor associada.
+Returns:
+prefixo necessário para colorir a String com this.
+testaTodasAsCores
+public static void testaTodasAsCores(java.lang.String teste)
+Colore a String teste com todas as cores de fontes e fundos disponíveis.
+Parameters:
+teste - String a ser colorida
+mecanicas
+Class PilhaDeCartas
+java.lang.Object
+mecanicas.PilhaDeCartas
+
+public class PilhaDeCartas
+extends java.lang.Object
+Classe que representa uma pilha de cartas, contendo métodos úteis para utilizá-las no tabuleiro.
+See Also:
+Carta, Tabuleiro
+Constructor Summary
+Constructors
+Constructor and Description
+PilhaDeCartas()
+Cria uma pilha vazia de Cartas.
+PilhaDeCartas(java.util.Collection<Carta> cartas)
+Cria uma pilha de Cartas baseada em alguma coleção já existente delas.
+Method Summary
+All MethodsInstance MethodsConcrete Methods
+Modifier and Type	Method and Description
+Carta	busca(Carta carta)
+Retorna o índice da Carta passada dentro desta PilhaDeCartas.
+Carta	busca(StringColorida faceDeCima)
+Retorna o índice da Carta cuja face buscada é igual à passada dentro desta PilhaDeCartas.
+Carta	compra()
+Remove e retorna a carta no topo desta PilhaDeCartas.
+PilhaDeCartas	compra(int quantidade)
+Remove e retorna as Cartas do topo desta PilhaDeCartas, de acordo com a quantidade passada.
+Carta	compraQualquer(int pos)
+Remove e retorna a Carta que está na posição passada desta PilhaDeCartas.
+PilhaDeCartas	compraTudo()
+Retorna uma nova PilhaDeCartas composta de todas as Cartas desta removedo-as desta.
+void	embaralha()
+Embaralha esta PilhaDeCartas.
+int	getTamanho()
+Retorna a quantidade de cartas nesta PilhaDeCartas.
+void	insere(int pos, Carta carta)
+Insere a Carta passada na posição especificada desta PilhaDeCartas.
+void	insereAleatorio(Carta carta)
+Insere a carta passada em alguma posição aleatória desta PilhaDeCartas.
+void	insereFundo(Carta carta)
+Insere a carta passada na base desta PilhaDeCartas.
+void	insereTopo(Carta carta)
+Insere a carta passada no topo desta PilhaDeCartas.
+Carta	verTopo()
+Retorna a referência da Carta que está no topo da PilhaDeCartas.
+Methods inherited from class java.lang.Object
+clone, equals, finalize, getClass, hashCode, notify, notifyAll, toString, wait, wait, wait
+Constructor Detail
+PilhaDeCartas
+public PilhaDeCartas()
+Cria uma pilha vazia de Cartas.
+See Also:
+Carta
+PilhaDeCartas
+public PilhaDeCartas(java.util.Collection<Carta> cartas)
+Cria uma pilha de Cartas baseada em alguma coleção já existente delas.
+Parameters:
+cartas - coleção de cartas já existente.
+See Also:
+Carta
+Method Detail
+verTopo
+public Carta verTopo()
+Retorna a referência da Carta que está no topo da PilhaDeCartas.
+Returns:
+a referência da Carta que está no topo da PilhaDeCartas.
+See Also:
+Carta
+getTamanho
+public int getTamanho()
+Retorna a quantidade de cartas nesta PilhaDeCartas.
+Returns:
+a quantidade de cartas nesta PilhaDeCartas.
+insere
+public void insere(int pos,
+                   Carta carta)
+Insere a Carta passada na posição especificada desta PilhaDeCartas.
+Parameters:
+pos - posição onde a Carta deve ser inserida.
+carta - Carta a ser inserida
+See Also:
+Carta
+insereTopo
+public void insereTopo(Carta carta)
+Insere a carta passada no topo desta PilhaDeCartas.
+Parameters:
+carta - Carta a ser inserida
+See Also:
+Carta
+insereFundo
+public void insereFundo(Carta carta)
+Insere a carta passada na base desta PilhaDeCartas.
+Parameters:
+carta - Carta a ser inserida
+See Also:
+Carta
+insereAleatorio
+public void insereAleatorio(Carta carta)
+Insere a carta passada em alguma posição aleatória desta PilhaDeCartas.
+Parameters:
+carta - Carta a ser inserida
+See Also:
+Carta
+compra
+public Carta compra()
+Remove e retorna a carta no topo desta PilhaDeCartas.
+Returns:
+a carta no topo desta PilhaDeCartas.
+See Also:
+Carta
+compra
+public PilhaDeCartas compra(int quantidade)
+Remove e retorna as Cartas do topo desta PilhaDeCartas, de acordo com a quantidade passada.
+Parameters:
+quantidade - quantidade de cartas a serem compradas da PilhaDeCartas.
+Returns:
+Uma nova PilhaDeCartas contendo todas as cartas compradas.
+See Also:
+Carta
+compraTudo
+public PilhaDeCartas compraTudo()
+Retorna uma nova PilhaDeCartas composta de todas as Cartas desta removedo-as desta.
+Returns:
+uma nova PilhaDeCartas contendo todas as cartas compradas.
+See Also:
+Carta
+compraQualquer
+public Carta compraQualquer(int pos)
+Remove e retorna a Carta que está na posição passada desta PilhaDeCartas.
+Parameters:
+pos - posição da carta a ser comprada.
+Returns:
+a Carta na posição passada.
+See Also:
+Carta
+busca
+public Carta busca(StringColorida faceDeCima)
+Retorna o índice da Carta cuja face buscada é igual à passada dentro desta PilhaDeCartas. Caso não pertença à ela, retorna -1.
+Parameters:
+faceDeCima - Face da carta buscada
+Returns:
+o índice da Carta cuja frente é igual a passada dentro desta PilhaDeCartas. Caso não pertença à ela, retorna -1
+See Also:
+Carta
+busca
+public Carta busca(Carta carta)
+Retorna o índice da Carta passada dentro desta PilhaDeCartas. Caso não pertença à ela, retorna -1.
+Parameters:
+carta - Carta a ser buscada.
+Returns:
+o índice da Carta passada dentro desta PilhaDeCartas. Caso não pertença à ela, retorna -1.
+See Also:
+Carta
+embaralha
+public void embaralha()
+Embaralha esta PilhaDeCartas.
+cores
+Class StringColorida
+java.lang.Object
+cores.StringColorida
+
+public class StringColorida
+extends java.lang.Object
+Classe que representa uma String colorida. Ela permite que tanto a fonte quanto o fundo sejam coloridos com cores diferentes, desde que apenas utilize os disponíveis na Enum Cor. Objetos desta classe não colorem o caracter '\n'
+See Also:
+Cor
+Constructor Summary
+Constructors
+Constructor and Description
+StringColorida(java.lang.String string)
+Cria uma StringColorida a partir de uma String, com as cores básicas.
+StringColorida(java.lang.String string, Cor corFonte)
+Cria uma StringColorida a partir de uma String setando a cor da fonte.
+StringColorida(java.lang.String string, Cor cor, boolean fundo)
+Cria uma StringColorida a partir de uma String setando a cor da fonte ou do fundo apenas.
+StringColorida(java.lang.String string, Cor corFonte, Cor corFundo)
+Cria uma StringColorida a partir de uma String e com as cores de fonte e de fundo passadas.
+StringColorida(java.lang.String string, java.lang.String corFonte)
+Cria uma StringColorida a partir de uma String setando a cor da fonte de acordo com a String passada.
+StringColorida(java.lang.String string, java.lang.String cor, boolean fundo)
+Cria uma StringColorida a partir de uma String setando a cor da fonte.
+StringColorida(java.lang.String string, java.lang.String corFonte, java.lang.String corFundo)
+Cria uma StringColorida a partir de uma String e com as cores de fonte e de fundo passadas, também através de Strings.
+Method Summary
+All MethodsInstance MethodsConcrete Methods
+Modifier and Type	Method and Description
+StringColorida	copia()
+Cria uma nova StringColorida idêntica à esta.
+boolean	equals(java.lang.Object obj)
+StringColorida	getCharColorido(int linha, int coluna)
+Retorna uma StringColorida com apenas o caracter da posição 'linha' e 'coluna'.
+int[]	getDimensao()
+Trata esta StringColorida como uma matriz, onde cada linha termina em com o caracter '\n' e retorna a dimensão desta matriz.
+java.lang.String	getString()
+Retorna esta String sem cores.
+int	hashCode()
+java.lang.String	toString()
+java.lang.String	toStringAllInfo()
+Retorna uma String com a lista de todas as informações sobre esta StringColorida.
+StringColorida	versoDesta(java.lang.String cor)
+Cria uma StringColorida com as mesmas dimensões desta, composta apenas por espaços em branco, coloridas com 'cor'.
+Methods inherited from class java.lang.Object
+clone, finalize, getClass, notify, notifyAll, wait, wait, wait
+Constructor Detail
+StringColorida
+public StringColorida(java.lang.String string)
+Cria uma StringColorida a partir de uma String, com as cores básicas.
+Parameters:
+string - String sem cor.
+StringColorida
+public StringColorida(java.lang.String string,
+                      Cor corFonte,
+                      Cor corFundo)
+Cria uma StringColorida a partir de uma String e com as cores de fonte e de fundo passadas.
+Parameters:
+string - String sem cor a ser colorida.
+corFonte - Cor da fonte. (deve pertencer ao Enum Cor)
+corFundo - Cor do fundo. (deve pertencer ao Enum Cor)
+See Also:
+Cor
+StringColorida
+public StringColorida(java.lang.String string,
+                      Cor cor,
+                      boolean fundo)
+Cria uma StringColorida a partir de uma String setando a cor da fonte ou do fundo apenas.
+Parameters:
+string - String sem cor a ser colorida.
+cor - Cor a ser colocada no fundo ou na fonte. (deve pertencer ao Enum Cor)
+fundo - se true, cor é setada no fundo e na fonte, caso contrário.
+See Also:
+Cor
+StringColorida
+public StringColorida(java.lang.String string,
+                      Cor corFonte)
+Cria uma StringColorida a partir de uma String setando a cor da fonte.
+Parameters:
+string - String sem cor a ser colorida.
+corFonte - Cor da fonte. (deve pertencer ao Enum Cor)
+See Also:
+Cor
+StringColorida
+public StringColorida(java.lang.String string,
+                      java.lang.String corFonte)
+Cria uma StringColorida a partir de uma String setando a cor da fonte de acordo com a String passada.
+Parameters:
+string - String sem cor a ser colorida.
+corFonte - Cor a ser colocada na fonte. (deve pertencer ao Enum Cor)
+See Also:
+Cor
+StringColorida
+public StringColorida(java.lang.String string,
+                      java.lang.String corFonte,
+                      java.lang.String corFundo)
+Cria uma StringColorida a partir de uma String e com as cores de fonte e de fundo passadas, também através de Strings.
+Parameters:
+string - String sem cor a ser colorida.
+corFonte - String da cor da fonte. (deve pertencer ao Enum Cor)
+corFundo - String da cor do fundo. (deve pertencer ao Enum Cor)
+See Also:
+Cor
+StringColorida
+public StringColorida(java.lang.String string,
+                      java.lang.String cor,
+                      boolean fundo)
+Cria uma StringColorida a partir de uma String setando a cor da fonte.
+Parameters:
+string - String sem cor a ser colorida.
+cor - String da cor a ser colocada na fonte. (deve pertencer ao Enum Cor)
+fundo - se true, cor é setada no fundo e na fonte, caso contrário.
+See Also:
+Cor
+Method Detail
+copia
+public StringColorida copia()
+Cria uma nova StringColorida idêntica à esta.
+Returns:
+uma cópia completa desta StringColorida
+See Also:
+Cor
+getString
+public java.lang.String getString()
+Retorna esta String sem cores.
+Returns:
+Retorna esta String sem cores
+See Also:
+Cor
+getDimensao
+public int[] getDimensao()
+Trata esta StringColorida como uma matriz, onde cada linha termina em com o caracter '\n' e retorna a dimensão desta matriz.
+Returns:
+Retorna a altura na posição 0 e a largura na posição 1.
+See Also:
+Cor
+getCharColorido
+public StringColorida getCharColorido(int linha,
+                                      int coluna)
+Retorna uma StringColorida com apenas o caracter da posição 'linha' e 'coluna'.
+Parameters:
+linha - linha do caracter.
+coluna - ooluna do caracter.
+Returns:
+uma StringColorida composta apenas pelo caracter da posição 'linha' e 'coluna'.
+See Also:
+Cor
+versoDesta
+public StringColorida versoDesta(java.lang.String cor)
+Cria uma StringColorida com as mesmas dimensões desta, composta apenas por espaços em branco, coloridas com 'cor'.
+Parameters:
+cor - cor do fundo da nova StringColorida.
+Returns:
+uma StringColorida com as mesmas dimensões desta, composta apenas por espaços em branco, coloridas com 'cor'.
+See Also:
+Cor
+toString
+public java.lang.String toString()
+Overrides:
+toString in class java.lang.Object
+toStringAllInfo
+public java.lang.String toStringAllInfo()
+Retorna uma String com a lista de todas as informações sobre esta StringColorida.
+Returns:
+uma String com a lista de todas as informações sobre esta StringColorida.
+hashCode
+public int hashCode()
+Overrides:
+hashCode in class java.lang.Object
+equals
+public boolean equals(java.lang.Object obj)
+Overrides:
+equals in class java.lang.Object
+
+mecanicas
+Class Tabuleiro
+java.lang.Object
+mecanicas.Tabuleiro
+
+public abstract class Tabuleiro
+extends java.lang.Object
+Classe que representa o tabuleiro onde os jogos de cartas são jogados. Trata-se de uma matriz de Cartas que identifica o fundo e outra matriz de mesma dimensão de PilhaDeCartas, onde de fato ficam as cartas dos jogos.
+See Also:
+Carta, PilhaDeCartas
+Constructor Summary
+Constructors
+Constructor and Description
+Tabuleiro(int numLinhas, int numColunas, Carta fundo)
+Cria um Tabuleiro básico a partir de um número de linhas, de colunas e cópias de uma mesma Carta que irão compor o fundo.
+Tabuleiro(Tabuleiro fundo)
+Cria um Tabuleiro a partir de outro já existente com o mesmo fundo, porém com PilhasDeCartas vazias
+Method Summary
+All MethodsInstance MethodsConcrete Methods
+Modifier and Type	Method and Description
+void	colocaCarta(int linha, int coluna, Carta carta)
+Coloca a Carta passada no topo da PilhaDeCartas que está na posição passada.
+Carta	getFundo(int linha, int coluna)
+Retorna a referência da Carta que está no fundo da posição passada neste Tabuleiro.
+PilhaDeCartas	getPilha(int linha, int coluna)
+Retorna a referência da PilhaDeCartas que está na posição passada neste Tabuleiro.
+int	getTotalColunas()
+Retorna a quantidade de colunas deste Tabuleiro.
+int	getTotalLinhas()
+Retorna a quantidade de linhas deste Tabuleiro.
+Carta	pegaCarta(int linha, int coluna)
+Compra a Carta que está no topo da PilhaDeCartas que está na posição passada.
+PilhaDeCartas	pegaPilha(int linha, int coluna)
+Retira a PilhaDeCartas que está na posição passada e a retorna.
+void	setFundo(int linha, int coluna, Carta carta)
+Altera a Carta que está no fundo da posição passada neste Tabuleiro.
+java.lang.String	toString()
+void	viraCarta(int linha, int coluna)
+Vira a Carta que está no topo da PilhaDeCartas da posição passada.
+Methods inherited from class java.lang.Object
+clone, equals, finalize, getClass, hashCode, notify, notifyAll, wait, wait, wait
+Constructor Detail
+Tabuleiro
+public Tabuleiro(int numLinhas,
+                 int numColunas,
+                 Carta fundo)
+Cria um Tabuleiro básico a partir de um número de linhas, de colunas e cópias de uma mesma Carta que irão compor o fundo. As Pilhas são vazias inicialmente.
+Parameters:
+numLinhas - número de linhas do Tabuleiro.
+numColunas - número de colunas do Tabuleiro.
+fundo - Carta cujas cópias compõem o fundo do Tabuleiro.
+See Also:
+Carta, PilhaDeCartas
+Tabuleiro
+public Tabuleiro(Tabuleiro fundo)
+Cria um Tabuleiro a partir de outro já existente com o mesmo fundo, porém com PilhasDeCartas vazias
+Parameters:
+fundo - Tabuleiro cujo fundo será copiado.
+See Also:
+PilhaDeCartas
+Method Detail
+getTotalLinhas
+public int getTotalLinhas()
+Retorna a quantidade de linhas deste Tabuleiro.
+Returns:
+a quantidade de linhas deste Tabuleiro.
+getTotalColunas
+public int getTotalColunas()
+Retorna a quantidade de colunas deste Tabuleiro.
+Returns:
+a quantidade de colunas deste Tabuleiro.
+getPilha
+public PilhaDeCartas getPilha(int linha,
+                              int coluna)
+Retorna a referência da PilhaDeCartas que está na posição passada neste Tabuleiro.
+Parameters:
+linha - linha da posição
+coluna - coluna da posição
+Returns:
+a referência da PilhaDeCartas que está na posição passada neste Tabuleiro.
+See Also:
+PilhaDeCartas
+getFundo
+public Carta getFundo(int linha,
+                      int coluna)
+Retorna a referência da Carta que está no fundo da posição passada neste Tabuleiro.
+Parameters:
+linha - linha da posição
+coluna - coluna da posição
+Returns:
+a referência da Carta que está no fundo da posição passada neste Tabuleiro.
+See Also:
+Carta
+setFundo
+public void setFundo(int linha,
+                     int coluna,
+                     Carta carta)
+Altera a Carta que está no fundo da posição passada neste Tabuleiro.
+Parameters:
+linha - linha da posição
+coluna - coluna da posição
+carta - carta a ser inserida
+See Also:
+Carta
+viraCarta
+public void viraCarta(int linha,
+                      int coluna)
+Vira a Carta que está no topo da PilhaDeCartas da posição passada.
+Parameters:
+linha - linha da posição
+coluna - coluna da posição
+See Also:
+Carta, PilhaDeCartas
+colocaCarta
+public void colocaCarta(int linha,
+                        int coluna,
+                        Carta carta)
+Coloca a Carta passada no topo da PilhaDeCartas que está na posição passada.
+Parameters:
+linha - linha da posição
+coluna - coluna da posição
+carta - Carta a ser colocada no topo.
+See Also:
+Carta, PilhaDeCartas
+pegaCarta
+public Carta pegaCarta(int linha,
+                       int coluna)
+Compra a Carta que está no topo da PilhaDeCartas que está na posição passada.
+Parameters:
+linha - linha da posição
+coluna - coluna da posição
+Returns:
+a Carta que está no topo da PilhaDeCartas que está na posição passada.
+See Also:
+Carta, PilhaDeCartas
+pegaPilha
+public PilhaDeCartas pegaPilha(int linha,
+                               int coluna)
+Retira a PilhaDeCartas que está na posição passada e a retorna.
+Parameters:
+linha - linha da posição
+coluna - coluna da posição
+Returns:
+a PilhaDeCartas que está na posição passada.
+See Also:
+PilhaDeCartas
+toString
+public java.lang.String toString()
+Overrides:
+toString in class java.lang.Object
+
+console
+Enum Tecla
+java.lang.Object
+java.lang.Enum<Tecla>
+console.Tecla
+All Implemented Interfaces:
+java.io.Serializable, java.lang.Comparable<Tecla>
+
+public enum Tecla
+extends java.lang.Enum<Tecla>
+Classe Enum utilizada para representar os códigos das teclas reconhecíveis pela classe Console.
+See Also:
+Console
+Enum Constant Summary
+Enum Constants
+Enum Constant and Description
+A
+Representa a tecla da letra correspondente.
+ALT
+Representa a tecla ALT.
+B
+Representa a tecla da letra correspondente.
+C
+Representa a tecla da letra correspondente.
+CEDILHA
+Representa a tecla da letra correspondente.
+CTRL
+Representa a tecla CTRL.
+D
+Representa a tecla da letra correspondente.
+DOWN
+Representa a seta para baixo no teclado.
+E
+Representa a tecla da letra correspondente.
+ENTER
+Representa a tecla ENTER.
+ESC
+Representa a tecla ESC.
+ESPACO
+Representa a tecla ESPAÇO.
+F
+Representa a tecla da letra correspondente.
+G
+Representa a tecla da letra correspondente.
+H
+Representa a tecla da letra correspondente.
+I
+Representa a tecla da letra correspondente.
+J
+Representa a tecla da letra correspondente.
+K
+Representa a tecla da letra correspondente.
+L
+Representa a tecla da letra correspondente.
+LEFT
+Representa a seta para esquerda no teclado.
+M
+Representa a tecla da letra correspondente.
+N
+Representa a tecla da letra correspondente.
+NUM_0
+Representa a tecla do número correspondente.
+NUM_1
+Representa a tecla do número correspondente.
+NUM_2
+Representa a tecla do número correspondente.
+NUM_3
+Representa a tecla do número correspondente.
+NUM_4
+Representa a tecla do número correspondente.
+NUM_5
+Representa a tecla do número correspondente.
+NUM_6
+Representa a tecla do número correspondente.
+NUM_7
+Representa a tecla do número correspondente.
+NUM_8
+Representa a tecla do número correspondente.
+NUM_9
+Representa a tecla do número correspondente.
+O
+Representa a tecla da letra correspondente.
+P
+Representa a tecla da letra correspondente.
+Q
+Representa a tecla da letra correspondente.
+R
+Representa a tecla da letra correspondente.
+RIGHT
+Representa a seta para direita no teclado.
+S
+Representa a tecla da letra correspondente.
+SHIFT
+Representa a tecla SHIFT da esquerda.
+T
+Representa a tecla da letra correspondente.
+TAB
+Representa a tecla TAB.
+U
+Representa a tecla da letra correspondente.
+UP
+Representa a seta para cima no teclado.
+V
+Representa a tecla da letra correspondente.
+W
+Representa a tecla da letra correspondente.
+X
+Representa a tecla da letra correspondente.
+Y
+Representa a tecla da letra correspondente.
+Z
+Representa a tecla da letra correspondente.
+Method Summary
+All MethodsStatic MethodsConcrete Methods
+Modifier and Type	Method and Description
+static Tecla	getTecla(int codigoTecla)
+Método que retorna a Tecla associada ao código passado.
+static Tecla	valueOf(java.lang.String name)
+Returns the enum constant of this type with the specified name.
+static Tecla[]	values()
+Returns an array containing the constants of this enum type, in the order they are declared.
+Methods inherited from class java.lang.Enum
+clone, compareTo, equals, finalize, getDeclaringClass, hashCode, name, ordinal, toString, valueOf
+Methods inherited from class java.lang.Object
+getClass, notify, notifyAll, wait, wait, wait
+Enum Constant Detail
+UP
+public static final Tecla UP
+Representa a seta para cima no teclado.
+DOWN
+public static final Tecla DOWN
+Representa a seta para baixo no teclado.
+RIGHT
+public static final Tecla RIGHT
+Representa a seta para direita no teclado.
+LEFT
+public static final Tecla LEFT
+Representa a seta para esquerda no teclado.
+ENTER
+public static final Tecla ENTER
+Representa a tecla ENTER.
+ESC
+public static final Tecla ESC
+Representa a tecla ESC.
+TAB
+public static final Tecla TAB
+Representa a tecla TAB.
+CTRL
+public static final Tecla CTRL
+Representa a tecla CTRL.
+ALT
+public static final Tecla ALT
+Representa a tecla ALT.
+SHIFT
+public static final Tecla SHIFT
+Representa a tecla SHIFT da esquerda.
+ESPACO
+public static final Tecla ESPACO
+Representa a tecla ESPAÇO.
+A
+public static final Tecla A
+Representa a tecla da letra correspondente.
+B
+public static final Tecla B
+Representa a tecla da letra correspondente.
+C
+public static final Tecla C
+Representa a tecla da letra correspondente.
+D
+public static final Tecla D
+Representa a tecla da letra correspondente.
+E
+public static final Tecla E
+Representa a tecla da letra correspondente.
+F
+public static final Tecla F
+Representa a tecla da letra correspondente.
+G
+public static final Tecla G
+Representa a tecla da letra correspondente.
+H
+public static final Tecla H
+Representa a tecla da letra correspondente.
+I
+public static final Tecla I
+Representa a tecla da letra correspondente.
+J
+public static final Tecla J
+Representa a tecla da letra correspondente.
+K
+public static final Tecla K
+Representa a tecla da letra correspondente.
+L
+public static final Tecla L
+Representa a tecla da letra correspondente.
+M
+public static final Tecla M
+Representa a tecla da letra correspondente.
+N
+public static final Tecla N
+Representa a tecla da letra correspondente.
+O
+public static final Tecla O
+Representa a tecla da letra correspondente.
+P
+public static final Tecla P
+Representa a tecla da letra correspondente.
+Q
+public static final Tecla Q
+Representa a tecla da letra correspondente.
+R
+public static final Tecla R
+Representa a tecla da letra correspondente.
+S
+public static final Tecla S
+Representa a tecla da letra correspondente.
+T
+public static final Tecla T
+Representa a tecla da letra correspondente.
+U
+public static final Tecla U
+Representa a tecla da letra correspondente.
+V
+public static final Tecla V
+Representa a tecla da letra correspondente.
+W
+public static final Tecla W
+Representa a tecla da letra correspondente.
+X
+public static final Tecla X
+Representa a tecla da letra correspondente.
+Y
+public static final Tecla Y
+Representa a tecla da letra correspondente.
+Z
+public static final Tecla Z
+Representa a tecla da letra correspondente.
+CEDILHA
+public static final Tecla CEDILHA
+Representa a tecla da letra correspondente.
+NUM_0
+public static final Tecla NUM_0
+Representa a tecla do número correspondente.
+NUM_1
+public static final Tecla NUM_1
+Representa a tecla do número correspondente.
+NUM_2
+public static final Tecla NUM_2
+Representa a tecla do número correspondente.
+NUM_3
+public static final Tecla NUM_3
+Representa a tecla do número correspondente.
+NUM_4
+public static final Tecla NUM_4
+Representa a tecla do número correspondente.
+NUM_5
+public static final Tecla NUM_5
+Representa a tecla do número correspondente.
+NUM_6
+public static final Tecla NUM_6
+Representa a tecla do número correspondente.
+NUM_7
+public static final Tecla NUM_7
+Representa a tecla do número correspondente.
+NUM_8
+public static final Tecla NUM_8
+Representa a tecla do número correspondente.
+NUM_9
+public static final Tecla NUM_9
+Representa a tecla do número correspondente.
+Method Detail
+values
+public static Tecla[] values()
+Returns an array containing the constants of this enum type, in the order they are declared. This method may be used to iterate over the constants as follows:
+for (Tecla c : Tecla.values())
+    System.out.println(c);
+Returns:
+an array containing the constants of this enum type, in the order they are declared
+valueOf
+public static Tecla valueOf(java.lang.String name)
+Returns the enum constant of this type with the specified name. The string must match exactly an identifier used to declare an enum constant in this type. (Extraneous whitespace characters are not permitted.)
+Parameters:
+name - the name of the enum constant to be returned.
+Returns:
+the enum constant with the specified name
+Throws:
+java.lang.IllegalArgumentException - if this enum type has no constant with the specified name
+java.lang.NullPointerException - if the argument is null
+getTecla
+public static Tecla getTecla(int codigoTecla)
+Método que retorna a Tecla associada ao código passado.
+Parameters:
+codigoTecla - código da tecla, proveniente de NativeKeyEvent.
+Returns:
+a Tecla com o código passado
+See Also:
+NativeKeyEvent
