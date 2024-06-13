@@ -1,0 +1,10 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="testinginhoinho:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/testinginhoinho_jar</output-path>
+    <root id="archive" name="JOGO2048JOAO.jar">
+      <element id="module-output" name="JOGO2048JOAO" />
+      <element id="extracted-dir" path="$USER_HOME$/Downloads/cardgamemaker-0.3.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/out/artifacts/JOGO2048JOAOCOSTA_jar/JOGO2048JOAOCOSTA.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>
