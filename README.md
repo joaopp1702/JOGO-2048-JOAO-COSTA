@@ -2,10 +2,15 @@ Desenvolvimento do jogo 2048 para a aula de POO realizado por João Pedro da Cos
 
 
 Sobre o Autor
+
 Nome: João Pedro da Costa Souza
+
 Profissão: Estudante de Ciencas da Computação
+
 Contato: vlogsjtv@gmail.com
+
 GitHub: https://github.com/joaopp1702
+
 
 
 
