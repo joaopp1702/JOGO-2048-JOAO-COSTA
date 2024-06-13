@@ -35,5 +35,3 @@ Após um bloco combinar, ele não pode combinar novamente na mesma jogada.
 Fim de Jogo:
 O jogo termina quando o jogador atinge um bloco com o número 2048.
 O jogo também termina se não houver mais movimentos possíveis, ou seja, quando todas as células estão preenchidas e nenhum bloco adjacente tem o mesmo número.
-
-Write your name on line 6, save it, and then head back to GitHub Desktop.
